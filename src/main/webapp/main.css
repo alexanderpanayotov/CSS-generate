@@ -1,0 +1,78 @@
+.preview-btn{
+position:relative;
+left: 36%;
+display:inline-block;
+
+}
+.save-btn{
+float: left;
+display: inline;
+}
+
+#page-header{
+	text-align: justify;
+	margin-left: 24%;
+	font-weight: bold;
+	text-decoration-style: solid;
+	font-size: 150%;
+	color:#337ab7;
+	text-shadow: 5px 2px 4px #000000;
+	
+}
+body{
+  background: url(background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.css-photo {
+	display: block;
+	margin-right: 5%;
+	margin-top: 0.00001%;
+	-webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+.css-photo:hover{
+	border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.photo-html{
+	display: block;
+	margin-bottom: : 7%;
+	margin-right: 5%;
+	-webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+.photo-html:hover{
+	border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+	@media all and (max-width: 984px){
+		#css 
+		{
+			display: none;
+		}
+		#html{
+			display: none;
+		}
+
+	}
+
+}
