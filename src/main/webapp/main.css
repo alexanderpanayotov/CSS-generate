@@ -7,6 +7,10 @@ display:inline-block;
 .save-btn{
 float: left;
 display: inline;
+}`	
+.data-btn{
+	float:left;
+	display: inline;
 }
 
 #page-header{
@@ -16,7 +20,8 @@ display: inline;
 	text-decoration-style: solid;
 	font-size: 150%;
 	color:#337ab7;
-	text-shadow: 5px 2px 4px #000000;
+	text-shadow: 5px 2px 4px #666;
+
 	
 }
 body{
@@ -74,5 +79,7 @@ body{
 		}
 
 	}
+
+	
 
 }
