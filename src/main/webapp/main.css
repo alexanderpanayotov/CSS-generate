@@ -1,16 +1,21 @@
-.preview-btn{
-position:relative;
-left: 36%;
-display:inline-block;
-
-}
 .save-btn{
 float: left;
 display: inline;
-}`	
+position: center;
+
+}
+
 .data-btn{
-	float:left;
-	display: inline;
+	position: relative;
+	left: 18%;
+	display: block;
+}
+
+.preview-btn{
+position:relative;
+left: 54%;
+display:block;
+
 }
 
 #page-header{
