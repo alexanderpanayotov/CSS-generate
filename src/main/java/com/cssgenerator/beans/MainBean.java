@@ -1,6 +1,6 @@
 package com.cssgenerator.beans;
 
-import java.util.Map;
+
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -11,7 +11,7 @@ import javax.persistence.Persistence;
 import javax.servlet.http.HttpServletRequest;
 
 import org.hibernate.HibernateException;
-import org.junit.Test;
+
 
 import com.cssgenerator.dao.CssStyleDAO;
 import com.cssgenerator.entities.CssStyle;

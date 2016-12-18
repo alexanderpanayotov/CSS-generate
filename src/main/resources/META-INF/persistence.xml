@@ -8,17 +8,17 @@
 	<persistence-unit name="Hibernate_JPA" transaction-type="RESOURCE_LOCAL">
     	<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		
-		<!-- <class>com.cssgenerator.entities.CssStyle</class> -->
+		<class>com.cssgenerator.entities.CssStyle</class>
 		
 		<properties>
-			<property name="hibernate.connection.url" value="jdbc:mysql://127.0.0.1:3306/cssgenerator" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/cssgenerator" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
 			<property name="hibernate.connection.username" value="root" />
-			<property name="hibernate.connection.password" value="9003196681" />
+			<property name="hibernate.connection.password" value="" />
 			<property name="hibernate.archive.autodetection" value="class" />
 			<property name="hibernate.show_sql" value="true" />
-			<property name="hibernate.format_sql" value="true" />
-			<property name="hbm2ddl.auto" value="update" />
+			<property name="hibernate.format_sql" value="true" />			
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
 		</properties>
 	</persistence-unit>
 </persistence>
