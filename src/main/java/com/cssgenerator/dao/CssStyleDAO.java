@@ -21,7 +21,7 @@ public class CssStyleDAO {
 		      long count = (Long)query.getSingleResult();
 		      System.out.println(count);
 	   /*   if(count == 1){
-	    	  System.out.println("Belq");
+	    	  System.out.println("Error");
 	      }
 	      else{
 	    	  entitymanager.getTransaction( ).begin( );
