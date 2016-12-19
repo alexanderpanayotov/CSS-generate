@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title>Че го бъде ли?</title>
+
+<style>
+
+#previewContainer {
+	display: none;
+}
+</style>
+
+</head>
+<h1>#{testBean.getMessage()}</h1>
+<body>
+	<script>
+		function myPreview() {
+			var input = document.getElementById("input").value;
+			document.getElementById("preview").value = input;
+			document.getElementById("previewContainer").style.display = "block";
+		}
+		function hidePreview() {
+			document.getElementById("previewContainer").style.display = "none;"
+		}
+	</script>
+
+	<h:form id="form">
+		<div>CSS properties:</div>
+		<br />
+		Border radius:
+		<input id="input" type="text" />
+		<button type="button" onclick="myPreview()">Preview</button>
+		<br />
+		<br />
+		<div id="previewContainer">
+		<!-- атрибута name е много важен!!! чрез него ще се прехвърлят всички данни от front-end към back-end -->
+			<textarea id="preview" name="preview"></textarea>
+			<br />
+			<h:commandButton onclick="hidePreview()" value="submit" type="submit" 
+				action="#{controller.save}">
+			</h:commandButton>
+		</div>
+		<br />
+	</h:form>
+</body>
+</html>

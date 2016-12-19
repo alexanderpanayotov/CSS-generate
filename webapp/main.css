@@ -1,0 +1,121 @@
+.save-btn{
+float: left;
+display: inline;
+position: center;
+
+}
+
+.data-btn{
+	position: relative;
+	left: 18%;
+	display: block;
+}
+
+.preview-btn{
+position:relative;
+left: 54%;
+display:block;
+}
+
+
+#page-header{
+	text-align: justify;
+	margin-left: 24%;
+	font-weight: bold;
+	text-decoration-style: solid;
+	font-size: 150%;
+	color:#337ab7;
+	text-shadow: 5px 2px 4px #666;
+
+}
+body{
+  background: url(background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.css-photo {
+	display: block;
+	margin-right: 5%;
+	margin-top: 0.00001%;
+	-webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+.css-photo:hover{
+	border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.photo-html{
+	display: block;
+	margin-bottom: : 7%;
+	margin-right: 5%;
+	-webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+.photo-html:hover{
+	border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+	@media all and (max-width: 984px){
+		#css
+		{
+			display: none;
+		}
+		#html{
+			display: none;
+		}
+
+	}
+
+	.dynamic-input{
+		text-rendering: auto;
+	    color: initial;
+	    letter-spacing: normal;
+	    word-spacing: normal;
+	    text-transform: none;
+	    text-indent: 0px;
+	    text-shadow: none;
+	    display: block;
+	    text-align: start;
+	    margin: 0em 0em 0em 0em;
+	    font: 13.3333px Arial;
+			font-size: 16px;
+    	padding: 5px;
+    	border-radius: 3px;
+    	border: 1px solid #ccc;
+    	outline: 1;
+	}
+	.label{
+
+
+
+	}
+.span{
+
+	font-family: Helvetica,"Helvetica Neue",Arial,sans-serif;
+	display: block;
+	float: left;
+	width: 100px;
+	padding-top: 9px;
+	display: block;
+	font-size: 14px;
+
+
+}
