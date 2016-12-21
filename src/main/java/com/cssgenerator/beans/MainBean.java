@@ -1,6 +1,7 @@
 package com.cssgenerator.beans;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -15,8 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.hibernate.HibernateException;
 
-import antlr.collections.List;
-
 import com.cssgenerator.dao.CssStyleDAO;
 import com.cssgenerator.entities.CssStyle;
 import com.cssgenerator.system.JPAUtil;
@@ -26,7 +25,7 @@ import com.cssgenerator.system.JPAUtil;
 public class MainBean {
 
 	private CssStyle currentStyle = new CssStyle();
-	private ArrayList<CssStyle> listOfCssStyle;
+	private List<CssStyle> listOfCssStyle;
 	private EntityManagerFactory emf = JPAUtil.getEntityManagerFactory();
 
 	public void save() {
@@ -50,6 +49,9 @@ public class MainBean {
 					"Инфо:", "Успешeн запис.");
 			addFacesContextMessage(message);
 		} catch (IllegalArgumentException e) {
+			if (entitymanager.getTransaction().isActive()) {
+				entitymanager.getTransaction().rollback();
+			}
 			FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_WARN,
 					"Инфо:", e.getMessage());
 			addFacesContextMessage(message);
@@ -69,18 +71,19 @@ public class MainBean {
 	}
 
 	public void load() {
-		
+
 		EntityManager entitymanager = emf.createEntityManager();
 		CssStyleDAO dao = new CssStyleDAO();
 		try {
 			listOfCssStyle = dao.loadAllStyles(entitymanager);
 		} catch (PersistenceException e) {
 			e.printStackTrace();
-		}finally{
+		} finally {
 			entitymanager.close();
 		}
 	}
-	public void addFacesContextMessage (FacesMessage message){
+
+	public void addFacesContextMessage(FacesMessage message) {
 		FacesContext context = FacesContext.getCurrentInstance();
 		context.addMessage(null, message);
 	}
@@ -94,11 +97,11 @@ public class MainBean {
 
 	}
 
-	public ArrayList<CssStyle> getListOfCssStyle() {
+	public List<CssStyle> getListOfCssStyle() {
 		return listOfCssStyle;
 	}
 
-	public void setListOfCssStyle(ArrayList<CssStyle> listOfCssStyle) {
+	public void setListOfCssStyle(List<CssStyle> listOfCssStyle) {
 		this.listOfCssStyle = listOfCssStyle;
 	}
 

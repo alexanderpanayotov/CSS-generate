@@ -3,6 +3,7 @@ package com.cssgenerator.dao;
 //import java.util.List;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -14,7 +15,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.SQLQuery;
 import org.hibernate.event.spi.SaveOrUpdateEvent;
 
-import antlr.collections.List;
+
 
 import com.cssgenerator.entities.CssStyle;
 
@@ -48,26 +49,26 @@ public class CssStyleDAO {
 
 	}
 
-	public ArrayList loadAllStyles(EntityManager entitymanager) {
+	public List loadAllStyles(EntityManager entitymanager) {
 		
 		try {
 			String sql = "FROM CssStyle";
 			Query query = entitymanager.createQuery(sql);
-			ArrayList<CssStyle> results = (ArrayList<CssStyle>) query.getResultList();
+			List<CssStyle> results = (List<CssStyle>) query.getResultList();
 			return results;
 		} catch (PersistenceException e) {
 			throw new PersistenceException("Грешка при четене от базата", e);
 		}
 	}
 
-	public ArrayList loadStyleByType(CssStyle css, EntityManager entitymanager) {
+	public List loadStyleByType(CssStyle css, EntityManager entitymanager) {
 		
 		String type = css.getType();
 		try {
 			String sql = "FROM CssStyle css Where css.type =:type";
 			Query query = entitymanager.createQuery(sql);
 			query.setParameter("type", type);
-			ArrayList<CssStyle> results = (ArrayList<CssStyle>) query.getResultList();
+			List<CssStyle> results = (List<CssStyle>) query.getResultList();
 			return results;
 		} catch (PersistenceException e) {
 			throw new PersistenceException("Грешка при четене от базата", e);
