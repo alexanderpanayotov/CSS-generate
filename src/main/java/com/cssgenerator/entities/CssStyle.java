@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 public class CssStyle implements Serializable {
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	//private static final long serialVersionUID = 1L;
 	private Long id;
 	private String type;

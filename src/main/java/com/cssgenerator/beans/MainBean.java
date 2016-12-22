@@ -15,6 +15,7 @@ import javax.persistence.PersistenceException;
 import javax.servlet.http.HttpServletRequest;
 
 import org.hibernate.HibernateException;
+import org.junit.Test;
 
 import com.cssgenerator.dao.CssStyleDAO;
 import com.cssgenerator.entities.CssStyle;
@@ -27,7 +28,7 @@ public class MainBean {
 	private CssStyle currentStyle = new CssStyle();
 	private List<CssStyle> listOfCssStyle;
 	private EntityManagerFactory emf = JPAUtil.getEntityManagerFactory();
-
+	@Test
 	public void save() {
 
 		EntityManager entitymanager = emf.createEntityManager();
@@ -35,11 +36,12 @@ public class MainBean {
 		HttpServletRequest request = (HttpServletRequest) FacesContext
 				.getCurrentInstance().getExternalContext().getRequest();
 
-		currentStyle.setCss(request.getParameter("css"));
-		currentStyle.setType(request.getParameter("type"));
-		currentStyle.setStyleName(request.getParameter("name"));
+//		currentStyle.setCss(request.getParameter("css"));
+//		currentStyle.setType(request.getParameter("type"));
+//		currentStyle.setStyleName(request.getParameter("name"));
 		CssStyleDAO dao = new CssStyleDAO();
-
+		currentStyle.setCss("css");
+		currentStyle.setStyleName("qwer");
 		try {
 			entitymanager.getTransaction().begin();
 			dao.save(currentStyle, entitymanager);
