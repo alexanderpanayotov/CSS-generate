@@ -44,9 +44,7 @@ public class CssStyleDAO {
 			} finally {
 				entitymanager.close();
 			}
-
 		}
-
 	}
 
 	public List loadAllStyles(EntityManager entitymanager) {
