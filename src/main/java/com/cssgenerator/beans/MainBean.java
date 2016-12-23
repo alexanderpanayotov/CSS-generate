@@ -36,11 +36,10 @@ public class MainBean {
 		HttpServletRequest request = (HttpServletRequest) FacesContext
 				.getCurrentInstance().getExternalContext().getRequest();
 
-		currentStyle.setCss(request.getParameter("css"));
+		currentStyle.setCss(request.getParameter("border-radius"));
 //		currentStyle.setType(request.getParameter("type"));
 //		currentStyle.setStyleName(request.getParameter("name"));
 		CssStyleDAO dao = new CssStyleDAO();
-		currentStyle.setCss("css");
 		currentStyle.setStyleName("qwer");
 		try {
 			entitymanager.getTransaction().begin();

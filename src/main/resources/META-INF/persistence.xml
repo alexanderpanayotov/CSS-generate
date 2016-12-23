@@ -11,7 +11,7 @@
 		<class>com.cssgenerator.entities.CssStyle</class>
 		
 		<properties>
-			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/CLIENTI" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/cssgenerator" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
 			<property name="hibernate.connection.username" value="root" />
 			<property name="hibernate.connection.password" value="9003196681" />
